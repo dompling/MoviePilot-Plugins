@@ -2,7 +2,7 @@
   "DanmuDownload": {
     "name": "弹幕下载",
     "description": "监控目录，下载弹幕。",
-    "labels": "弹幕play",
+    "labels": "弹幕",
     "version": "1.0.0",
     "icon": "danmu.png",
     "author": "dompling",
