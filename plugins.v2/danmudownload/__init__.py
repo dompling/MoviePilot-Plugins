@@ -67,7 +67,7 @@ class FileMonitorHandler(FileSystemEventHandler):
         )
 
 
-class DanmuPlay(_PluginBase):
+class DanmuDownload(_PluginBase):
     # 插件名称
     plugin_name = "弹幕下载"
     # 插件描述
