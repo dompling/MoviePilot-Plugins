@@ -628,7 +628,7 @@ class DanmuDownload(_PluginBase):
                         "content": [
                             {
                                 "component": "VCol",
-                                "props": {"cols": 12, "md": 4},
+                                "props": {"cols": 12},
                                 "content": [
                                     {
                                         "component": "VCol",
