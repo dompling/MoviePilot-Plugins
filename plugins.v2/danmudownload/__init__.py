@@ -391,7 +391,7 @@ class DanmuDownload(_PluginBase):
                 if not file_meta.name:
                     logger.error(f"{file_path.name} 无法识别有效信息")
                     return
-                
+
                 # 识别媒体信息
                 mediainfo: MediaInfo = self.chain.recognize_media(meta=file_meta)
                 if not mediainfo:
@@ -405,8 +405,7 @@ class DanmuDownload(_PluginBase):
                         )
                     return
                 print(mediainfo)
-                
-                
+
         except Exception as e:
             logger.error("目录监控发生错误：%s - %s" % (str(e), traceback.format_exc()))
 
@@ -660,18 +659,27 @@ class DanmuDownload(_PluginBase):
                                         ],
                                     },
                                     {
-                                        "component": "VSelect",
-                                        "props": {
-                                            "model": "mode",
-                                            "label": "监控模式",
-                                            "items": [
-                                                {
-                                                    "title": "兼容模式",
-                                                    "value": "compatibility",
+                                        "component": "VCol",
+                                        "props": {"cols": 12, "md": 4},
+                                        "content": [
+                                            {
+                                                "component": "VSelect",
+                                                "props": {
+                                                    "model": "mode",
+                                                    "label": "监控模式",
+                                                    "items": [
+                                                        {
+                                                            "title": "兼容模式",
+                                                            "value": "compatibility",
+                                                        },
+                                                        {
+                                                            "title": "性能模式",
+                                                            "value": "fast",
+                                                        },
+                                                    ],
                                                 },
-                                                {"title": "性能模式", "value": "fast"},
-                                            ],
-                                        },
+                                            },
+                                        ],
                                     },
                                 ],
                             },

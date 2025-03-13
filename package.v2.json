@@ -4,7 +4,7 @@
     "description": "监控目录，下载弹幕。",
     "labels": "弹幕",
     "version": "1.0.0",
-    "icon": "danmu.png",
+    "icon": "https://raw.githubusercontent.com/dompling/MoviePilot-Plugins/refs/heads/main/icons/danmu.png",
     "author": "dompling",
     "level": 1,
     "history": {
