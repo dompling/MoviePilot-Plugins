@@ -6,7 +6,7 @@
     "version": "1.0.0",
     "icon": "danmu.png",
     "author": "dompling",
-    "level": 2,
+    "level": 1,
     "history": {
       "v1.0": "danmu play"
     }
