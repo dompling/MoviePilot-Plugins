@@ -3,12 +3,12 @@
     "name": "媒体库弹幕下载",
     "description": "媒体库下载弹幕。",
     "labels": "弹幕",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "icon": "https://raw.githubusercontent.com/dompling/MoviePilot-Plugins/main/icons/danmu.png",
     "author": "dompling",
     "level": 1,
     "history": {
-      "v1.0": "danmu play"
+      "v1.0.1": "danmu play"
     }
   }
 }
