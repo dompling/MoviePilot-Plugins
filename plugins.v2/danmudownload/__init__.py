@@ -23,9 +23,9 @@ from app.utils.http import RequestUtils
 from app.core.config import settings
 
 
-class EmbyDanmuDownload(_PluginBase):
+class DanmuDownload(_PluginBase):
     # 插件名称
-    plugin_name = "Emby媒体库弹幕下载"
+    plugin_name = "弹幕下载"
     # 插件描述
     plugin_desc = "通知Emby Danmu插件下载弹幕。"
     # 插件图标

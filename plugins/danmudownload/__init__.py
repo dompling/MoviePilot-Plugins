@@ -23,15 +23,15 @@ from app.utils.http import RequestUtils
 from app.core.config import settings
 
 
-class EmbyDanmuDownload(_PluginBase):
+class DanmuDownload(_PluginBase):
     # 插件名称
-    plugin_name = "Emby媒体库弹幕下载"
+    plugin_name = "弹幕下载"
     # 插件描述
     plugin_desc = "通知Emby Danmu插件下载弹幕。"
     # 插件图标
     plugin_icon = "https://raw.githubusercontent.com/dompling/MoviePilot-Plugins/main/icons/danmu.png"
     # 插件版本
-    plugin_version = "1.0"
+    plugin_version = "1.0.1"
     # 插件作者
     plugin_author = "dompling"
     # 作者主页
@@ -106,7 +106,7 @@ class EmbyDanmuDownload(_PluginBase):
         library_item_season = None
         if event:
             event_data = event.event_data
-            if not event_data or event_data.get("action") != "embydanmu":
+            if not event_data or event_data.get("action") != "embydanmudown":
                 return
 
             args = event_data.get("arg_str")
@@ -868,11 +868,11 @@ class EmbyDanmuDownload(_PluginBase):
     def get_command() -> List[Dict[str, Any]]:
         return [
             {
-                "cmd": "/danmu",
+                "cmd": "/danmud",
                 "event": EventType.PluginAction,
-                "desc": "emby弹幕下载",
+                "desc": "媒体库弹幕下载",
                 "category": "",
-                "data": {"action": "embydanmu"},
+                "data": {"action": "embydanmudown"},
             }
         ]
 
@@ -893,8 +893,8 @@ class EmbyDanmuDownload(_PluginBase):
         if self._enabled and self._cron:
             return [
                 {
-                    "id": "embydanmu",
-                    "name": "Emby弹幕下载",
+                    "id": "embydanmudown",
+                    "name": "媒体库弹幕下载",
                     "trigger": CronTrigger.from_crontab(self._cron),
                     "func": self.danmu,
                     "kwargs": {},
